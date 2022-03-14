@@ -55,7 +55,9 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 ## MX Master 3
 
 https://askubuntu.com/questions/152297/how-to-configure-extra-buttons-in-logitech-mouse
+```
 sudo apt install git python3-setuptools gettext -y
+```
 https://github.com/sezanzeb/input-remapper/releases
 Button EXTRA => Super_L+KEY_PAGEUP
 Button SIDE => Super_L+KEY_PAGEUP
