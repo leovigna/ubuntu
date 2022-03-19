@@ -192,6 +192,9 @@ https://rotki.com/
 
 https://torguard.net/downloads.php
 
+## IPFS
+
+https://docs.ipfs.io/install/ipfs-desktop/#ubuntu
 ## Other Apps
 
 - Popcorn Time
