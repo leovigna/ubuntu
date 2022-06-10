@@ -13,6 +13,23 @@ sudo apt install build-essential -y
 sudo apt install gnome-tweak-tool dconf-editor -y #gnome-tweaks
 ```
 
+## Gnome Tweeks (MacOS Style)
+```
+cp -R ./icons ~/.icons
+cp -R ./themes ~/.themes
+```
+
+**Settings > Background**
+* Change Picture: `wallpaper.jpg`
+
+**Tweaks > Appearance**
+* Update Applications: `Mc-OS-CTLina-Gnome-Dark`
+* Update Cursor: `Capitaine-cusors`
+* Upate Icons: `Cupertino-Catalina` 
+
+**Tweaks > Extensions**
+* Enable Ubuntu dock
+
 ## Deja-Dup
 ```
 sudo apt install deja-dup -y
