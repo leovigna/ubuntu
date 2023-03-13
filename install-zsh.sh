@@ -23,3 +23,9 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 ## FZF
 $(brew --prefix)/opt/fzf/install
+
+# TMUX
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+~/.tmux/plugins/tpm/scripts/install_plugins.sh
+
+pip3 install --user pynvim #for treemyx

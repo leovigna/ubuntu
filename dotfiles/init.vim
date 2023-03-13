@@ -70,6 +70,11 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'tpope/vim-dotenv'
 " DB
 Plug 'tpope/vim-dadbod'
+" Tree
+Plug 'nvim-tree/nvim-web-devicons' " optional, for file icons
+Plug 'nvim-tree/nvim-tree.lua'
+
+
 call plug#end()
 
 filetype plugin indent on
@@ -225,7 +230,7 @@ let g:onedark_terminal_italics=1
 let g:one_allow_italics = 1
 let g:tokyonight_style = "storm"
 let g:tokyonight_italic_functions = 1
-colorscheme kanagawa
+colorscheme molokai
 " colorscheme tokyonight
 hi Normal guibg=NONE ctermbg=NONE
 

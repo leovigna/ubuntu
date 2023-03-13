@@ -10,12 +10,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH:.:$HOME/.local/bin:
-
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -67,8 +61,6 @@ COMPLETION_WAITING_DOTS="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-export NVM_LAZY=1
-
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
@@ -85,19 +77,14 @@ plugins=(
     emoji
     zsh-autosuggestions
     zsh-syntax-highlighting
-    # nvm
+    nvm
 )
-
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-export LANG=en_US.UTF-8
-export LC_CTYPE=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -126,6 +113,8 @@ export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias zshconfig="nvim ~/.zshrc"
 
+zstyle ':omz:plugins:nvm' lazy yes
+
 function weather { curl "wttr.in/$1?m" }
 
 ## Kubernetes
@@ -151,7 +140,6 @@ function knodespvcs {
     kbmnodes | while read p; do echo "=== $p"; kubectl get pvc -A -o jsonpath="{range .items[?(@.metadata.annotations.volume\.kubernetes\.io/selected-node=='$p')]}{.metadata.namespace}{'\t'}{.metadata.name}{'\n'}{end}" --all-namespaces; echo; done
 }
 
-export EDITOR=nvim
 # export TERM="xterm-256color"
 export WORKON_HOME=$HOME/Envs
 #export VIRTUALENVWRAPPER_PYTHON=/home/linuxbrew/.linuxbrew/Homebrew/bin/python3
@@ -161,14 +149,6 @@ export WORKON_HOME=$HOME/Envs
 export LIBGL_ALWAYS_INDIRECT=1
 
 # FZF
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND="fd --strip-cwd-prefix --color=always --exclude .git"
-export FZF_DEFAULT_OPTS="--ansi --height 100%"
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_CTRL_T_OPTS="--preview 'bat --style=numbers --color=always --line-range :500 {}'"
-
-export OWL="[0m[34mO[0m [35mW[0m [31mL[0m"
-
 # Search for kube pods using fzf
 pods() {
   FZF_DEFAULT_COMMAND="kubectl get pods --all-namespaces" \
@@ -200,10 +180,6 @@ function cheat { curl cheat.sh/$1 }
 
 alias nrs="npm run serve"
 
-# export PATH="~/.linuxbrew/Homebrew/bin:$PATH"
-export PATH="/home/linuxbrew/.linuxbrew/Homebrew/bin:$PATH"
-export PATH="/home/linuxbrew/.linuxbrew/Homebrew/sbin:$PATH"
-
 # source /opt/intel/oneapi/vtune/latest/env/vars.sh
 alias guv="git add -uv"
 alias gcan="git commit --amend --no-edit"
@@ -216,14 +192,7 @@ function ef { find -wholename $1 | xargs nvim }
 alias fpp="fpp -ni"
 
 [ -f "~/.ghcup/env" ] && source "~/.ghcup/env" # ghcup-env
-export PATH="$PATH:~/.cabal/bin:~/.krew/bin"
-
 function ghcl { git clone git@github.com:$1.git ${@:2}}
-
-# pnpm
-export PNPM_HOME="~/.local/share/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-# pnpm end
 
 function json-curl { \
     curl $1 \
@@ -231,8 +200,6 @@ function json-curl { \
     -H "Content-Type: application/json" \
     -d \'$2\'
 }
-
-export PATH="$PATH:~/go/bin"
 
 alias glint="golangci-lint run"
 
@@ -242,18 +209,6 @@ alias untargz="tar -xzvf"
 function highlight () {
     grep --color=always -E "$1|$" "${@:2}"
 }
-
-# Tmux settings
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-
-# Ruby gem settings
-export GEM_HOME="~/.gem"
-export GEM_PATH="~/.gem"
-export PATH="$PATH:~/.gem/bin"
-
-export PATH="$PATH:~/.cargo/bin"
-export PATH="$PATH:~/tools/kubectl-plugins"
 
 # zsh history settings
 export HISTSIZE=100000
@@ -291,14 +246,9 @@ function fppvi {
 # export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/lib/x86_64-linux-gnu/:/home/linuxbrew/.linuxbrew/Homebrew/lib"
 alias ctop='TERM="${TERM/#tmux/screen}" ctop'
 
-# krew path
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-
 function ymerge {
      yq ea '. as $item ireduce ({}; . * $item )' ${@:1}
 }
-export PATH=$PATH:/usr/local/go/bin
-
 # JQ
 export JQ_COLORS="7;31"
 
@@ -307,6 +257,3 @@ complete -o nospace -C /home/linuxbrew/.linuxbrew/Homebrew/Cellar/mc/RELEASE.202
 
 # Vulcan settings
 source ~/.vulcan.zshrc
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

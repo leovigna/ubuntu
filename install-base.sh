@@ -5,7 +5,7 @@ apt update && apt upgrade -y
 
 # Basics
 apt install apt-transport-https curl -y
-apt install build-essential -y
+apt install build-essential  build-essential zlib1g-dev libffi-dev libssl-dev libbz2-dev libncurses-dev libreadline-dev libsqlite3-dev liblzma-dev -y
 apt install gnome-tweak-tool dconf-editor -y #gnome-tweaks
 
 # Backups

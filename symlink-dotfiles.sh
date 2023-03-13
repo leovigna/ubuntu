@@ -1,4 +1,4 @@
-for f in .gitconfig .p10k.zsh .tmux.conf .zprofile .zshrc .vulcan.zshrc Brewfile; do
+for f in .gitconfig .p10k.zsh .tmux.conf .zshenv .zshrc .vulcan.zshrc Brewfile; do
 	mv ~/$f ~/$f.bak
     ln -s $PWD/dotfiles/$f ~/$f
 done

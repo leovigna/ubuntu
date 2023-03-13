@@ -1,0 +1,6 @@
+[submodule "sclack"]
+	path = sclack
+	url = https://github.com/haskellcamargo/sclack.git
+[submodule "submodules/nerdfonts"]
+	path = submodules/nerdfonts
+	url = git@github.com:ryanoasis/nerd-fonts.git
