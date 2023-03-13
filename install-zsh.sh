@@ -16,5 +16,8 @@ wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20B
 fc-cache -fv
 ## Set font in terminal to MesloLGS
 
-## Instal P10k
+## Instal P10K
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+## FZF
+$(brew --prefix)/opt/fzf/install

@@ -152,7 +152,6 @@ function knodespvcs {
 }
 
 export EDITOR=nvim
-source ~/zsh-syntax-highlighting.plugin.zsh
 # export TERM="xterm-256color"
 export WORKON_HOME=$HOME/Envs
 #export VIRTUALENVWRAPPER_PYTHON=/home/linuxbrew/.linuxbrew/Homebrew/bin/python3
