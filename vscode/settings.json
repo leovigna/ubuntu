@@ -1,0 +1,9 @@
+{
+  "editor.fontSize": 16,
+  "editor.formatOnSave": true,
+  "window.zoomLevel": 0,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.fontFamily": "'MesloLGS NF', 'monospace', monospace"
+}

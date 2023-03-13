@@ -14,49 +14,63 @@ sudo apt install gnome-tweak-tool dconf-editor -y #gnome-tweaks
 ```
 
 ## Gnome Tweeks (MacOS Style)
+
 ```
 cp -R ./icons ~/.icons
 cp -R ./themes ~/.themes
 ```
 
 **Settings > Background**
-* Change Picture: `wallpaper.jpg`
+
+- Change Picture: `wallpaper.jpg`
 
 **Tweaks > Appearance**
-* Update Applications: `Mc-OS-CTLina-Gnome-Dark`
-* Update Cursor: `Capitaine-cusors`
-* Upate Icons: `Cupertino-Catalina` 
+
+- Update Applications: `Mc-OS-CTLina-Gnome-Dark`
+- Update Cursor: `Capitaine-cusors`
+- Upate Icons: `Cupertino-Catalina`
 
 **Tweaks > Extensions**
-* Enable Ubuntu dock
+
+- Enable Ubuntu dock
 
 ## Deja-Dup
+
 ```
 sudo apt install deja-dup -y
 ```
+
 Exclude directories with https://askubuntu.com/a/1378432
+
 ```
 which duplicity #/usr/bin/duplicity
 sudo vim /usr/local/bin/duplicity #shim
 ```
+
 Use dconf-editor to update /gnaore/deja-dup/exclude-list
+
 ```
 ['$TRASH', '$DOWNLOAD', '~/**/node_modules']
 ```
+
 ## Git
+
 ```
 git config --global user.email "leo.vigna@gmail.com"
 git config --global user.name "Leo Vigna"
 ```
 
 ## Github CLI
+
 https://github.com/cli/cli/blob/trunk/docs/install_linux.md
+
 ```
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
 sudo apt update
 sudo apt install gh
 ```
+
 ## Linuxbrew
 
 ```
@@ -72,9 +86,11 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 ## MX Master 3
 
 https://askubuntu.com/questions/152297/how-to-configure-extra-buttons-in-logitech-mouse
+
 ```
 sudo apt install git python3-setuptools gettext -y
 ```
+
 https://github.com/sezanzeb/input-remapper/releases
 Button EXTRA => Super_L+KEY_PAGEUP
 Button SIDE => Super_L+KEY_PAGEUP
@@ -212,6 +228,15 @@ https://torguard.net/downloads.php
 ## IPFS
 
 https://docs.ipfs.io/install/ipfs-desktop/#ubuntu
+
+## TUIs
+
+Personal selection from [https://github.com/rothgar/awesome-tuis](github.com/rothgar/awesome-tuis)
+
+- [btop](https://github.com/aristocratos/btop)
+- [k9s](https://github.com/derailed/k9s)
+- [sclack](https://github.com/haskellcamargo/sclack)
+
 ## Other Apps
 
 - Popcorn Time
