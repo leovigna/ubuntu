@@ -50,7 +50,7 @@ sudo vim /usr/local/bin/duplicity #shim
 Use dconf-editor to update /gnaore/deja-dup/exclude-list
 
 ```
-['$TRASH', '$DOWNLOAD', '~/**/node_modules']
+['$TRASH', '$DOWNLOAD', '~/**/node_modules', '~/.local/share/pnpm']
 ```
 
 ## Git
