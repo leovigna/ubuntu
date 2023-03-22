@@ -257,4 +257,3 @@ complete -o nospace -C /home/linuxbrew/.linuxbrew/Homebrew/Cellar/mc/RELEASE.202
 
 # Vulcan settings
 source ~/.vulcan.zshrc
-export PATH="$PATH:/home/leovigna/.foundry/bin"

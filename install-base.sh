@@ -59,3 +59,6 @@ echo \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 apt update && apt install docker-ce docker-ce-cli containerd.io -y
 chmod 666 /var/run/docker.sock
+
+# Foundry
+curl -L https://foundry.paradigm.xyz | bash
