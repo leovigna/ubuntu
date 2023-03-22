@@ -27,7 +27,7 @@ export GEM_PATH="~/.gem"
 export PATH="$PATH:$HOME/.gem/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$HOME/tools/kubectl-plugins"
-export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:$HOME/.foundry/bin"
 
 export EDITOR=nvim
 
