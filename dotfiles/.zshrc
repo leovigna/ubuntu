@@ -257,4 +257,4 @@ autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /home/linuxbrew/.linuxbrew/Homebrew/Cellar/mc/RELEASE.2023-01-28T20-29-38Z_1/bin/mc mc
 
 # Vulcan settings
-source ~/.vulcan.zshrc
+# source ~/.vulcan.zshrc
